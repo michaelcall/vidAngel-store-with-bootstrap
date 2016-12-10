@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app1">
+  <head>
+      <title>VidAngel</title>
+      <link rel="stylesheet" href="./bootstrap/css/bootstrap-flex.css">
+      <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.css">
+      <link rel="stylesheet" href="./bootstrap/css/bootstrap-reboot.css">
+      <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+      <link rel="stylesheet" href="./styles/master.css">
+  </head>
+  <body>
+
+    <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-xs-center m-t-3">
+        <h1 class="display-4">MOVIES FOR ONE BLEEPING DOLLAR</h1>
+        <p class="lead">This is a modified Version of VidAngel.</p>
+      </div>
+    </div>
+    <!--/jumbotron  -->
+
+  <ui-view class="container ui"> </ui-view>
+
+
+
+
+<!-- <ul class="nav nav-inline">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul> -->
+
+
+<nav class="navbar navbar-light bg-faded m-t-2 footer-color-charcole footer ">
+  <div class="nav navbar-nav ">
+    <div class="container-fluid p-t-2 p-3 m-t-1 bg-inverse text-white flex-for-footer-container ">
+      <div class="row flex-for-row-on-footer">
+        <div class="m ">
+          ABOUT
+        </div>
+        <div class="m ">
+          BLOG
+        </div>
+        <div class="m ">
+          MISSION
+        </div>
+        <div class="m ">
+          TEAM
+        </div>
+        <div class="m ">
+          PRESS
+        </div>
+        <div class="m ">
+          LAWSUIT
+        </div>
+        <div class="m ">
+          TERMS OF SERVICE
+        </div>
+        <div class="m ">
+          TERMS
+        </div>
+        <div class="m ">
+          PRIVACY
+        </div>
+        <div class="m ">
+          CONTACT
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 m-t-2 text-xs-center align-top">
+          COPYRIGHT © 2016, Michael Call. ALL RIGHTS RESERVED.
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 m-t-2 text-xs-center text-uppercase align-top">
+          Michael Call. PORTFOLIO-SITE: https://michael-call.com/.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 m-t-2 text-xs-center ">
+            <img  class="vidAngel-logo" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgOCAyMDAgNjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCA4IDIwMCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9DQoJLnN0MXtmaWxsOiM1OUM5RjQ7fQ0KPC9zdHlsZT4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMS4yLDU1LjFjLTEuNCwwLTIuMy0wLjYtMi43LTEuOWMtMC40LTEuMi0wLjQtMi44LTAuNC00LjFWNDljMC0zLjMsMi4xLTEzLjUsMy41LTE5LjNsMC4yLTAuOUwxMSwyOS4yDQoJYy0zLDEuNS00LDMuMy00LDcuMmMwLDEuNy0wLjcsMi0xLjQsMmMtMC45LDAtMS45LTEuMS0xLjktMy4xQzMuNywzMCwxMC4xLDI1LDE1LDI1YzAuNiwwLDEsMC4yLDEuMywwLjVjMC40LDAuNSwwLjUsMS42LDAuMSwzLjINCgljLTAuMiwwLjgtMS4xLDUuMy0yLDkuMmMtMC40LDItMC45LDQtMS4yLDUuNWMtMC4yLDAuNy0wLjMsMS40LTAuNCwxLjhjLTAuMSwwLjQtMC4xLDAuNi0wLjEsMC43bDAsMGMtMC4yLDEuMi0wLjUsMywwLjMsMy45DQoJYzAuMywwLjMsMC43LDAuNSwxLjEsMC41YzAuNywwLDIuMi0xLDUuMy03LjRjMi4xLTQuMywzLjctOC42LDMuOS0xMXYtMC4xbDAtMC4zYy0wLjctMS4zLTAuNS0zLjEsMC40LTQuNmMwLjctMS4zLDEuOS0yLDMtMg0KCWMxLjMsMCwyLjIsMC43LDIuMiwxLjdjMCwzLjMtMS45LDEwLjUtNS4xLDE2LjhDMjEuNSw0Ny44LDE3LDU1LjEsMTEuMiw1NS4xeiIvPg0KPGc+DQoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTUzLjgsNjIuN2MtMSwwLTMuMS0wLjMtMy44LTEuMWMtMC4xLTAuMi0wLjItMC4zLTAuMi0wLjVjMC0wLjQsMC4yLTAuNywwLjYtMC43YzAuMSwwLDAuMSwwLDAuMiwwbDAsMA0KCQljMi44LDAsNi45LTEuNiwxMS05YzAuNy0xLjIsMS40LTIuNiwyLjEtNGMwLjgtMS42LDEuNi0zLjIsMi42LTQuOWwwLjMtMC41SDY2Yy0xLTAuMi0xLjktMC4zLTIuOC0wLjNjLTIuMSwwLTIuNCwxLjEtMi42LDEuOQ0KCQljLTAuMiwwLjYtMC4yLDAuNy0wLjUsMC43Yy0xLjMsMC0yLTEuNi0yLTIuNnMwLjgtMy43LDQuMy0zLjdjMS43LDAsMy42LDAuMyw1LjUsMWwwLjMsMC4xbDAuMi0wLjNjMy4xLTUuOCw2LjktMTMuMSwxMy43LTEzLjENCgkJYzAuNiwwLDEsMC4yLDEuMywwLjVjMC43LDAuOCwwLjIsMi45LTAuMSw0LjJsLTAuMiwxLjFjMCwwLjItMC41LDIuNS0xLjIsNS43Yy0xLjQsNi40LTMuNSwxNi4yLTMuNywxN2MtMC4xLDAuNi0wLjYsMS0xLjIsMWwwLDANCgkJYy0wLjEsMC0wLjEsMC0wLjIsMGwtMi4xLTAuN2wwLDBjLTAuMy0wLjEtMC42LTAuMi0wLjgtMC41Yy0wLjItMC4zLTAuMi0wLjYtMC4yLTAuOWMwLjEtMC40LDAuMi0wLjgsMC4zLTEuMg0KCQljMC4xLTAuNiwwLjMtMS4yLDAuNS0yLjJ2LTAuMmwtMC4xLTAuMWMtMC45LTEuNy0yLjQtMy40LTQuMi00LjhsLTAuNC0wLjNsLTAuMiwwLjVjLTAuNiwxLjItMS4yLDIuNC0xLjcsMy41DQoJCWMtMC44LDEuNi0xLjUsMy4yLTIuMyw0LjZDNjMuMiw1Ny41LDU4LjgsNjIuNiw1My44LDYyLjdMNTMuOCw2Mi43eiBNNzguOCwzMS4xYy0yLjQtMC4xLTQuMywzLjctNy4yLDkuN2wtMC4yLDAuM2wwLjMsMC4yDQoJCWMxLjMsMC45LDIuNCwxLjksMy4zLDMuMWwwLjYsMC43bDAuMi0wLjljMS4zLTUuOSwyLjgtMTIuNiwyLjgtMTIuNkw3OC44LDMxLjFMNzguOCwzMS4xeiIvPg0KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMDguMiw2NWMtMS45LDAtMy44LTAuOS0zLjgtMi44YzAtMy4zLDMtNC41LDUuMi01LjVjMC44LTAuMywxLjQtMC42LDEuOC0wLjlsMC4xLTAuMXYtMC4yYzAsMCwwLTAuNCwwLjItMQ0KCQlsMC4yLTEuMWwtMC45LDAuN2MtMS40LDEtMi45LDEuMS00LjIsMS4xYy0xLjgsMC0zLjUtMS00LjItMi42bC0wLjMtMC42bC0wLjQsMC41Yy0xLjUsMS45LTIuNywyLjUtNS4yLDIuNWMtNCwwLTQuMi0zLjYtNC4yLTQuMw0KCQljMC0xLDAuNC0yLjcsMC44LTQuNGMwLjgtMy40LDEuMi01LjUsMC42LTYuNGMtMC4yLTAuMi0wLjQtMC4zLTAuNy0wLjNjLTMuNiwwLTQuNiw0LjktNS40LDguOGMtMC4xLDAuNi0wLjksNC41LTEuMSw1LjYNCgkJYy0wLjEsMC42LTAuNiwxLTEuMiwxYy0wLjEsMC0wLjEsMC0wLjIsMGwtMS45LTAuNGMtMC4zLTAuMS0wLjYtMC4yLTAuOC0wLjVjLTAuMi0wLjMtMC4yLTAuNi0wLjItMC45YzAuMi0wLjgsMC40LTEuOCwwLjctMw0KCQljMC4zLTEuNiwwLjgtMy43LDEuMi01LjhjMC4zLTEuNCwwLjYtMi43LDAuOS00YzAuNC0yLjIsMC43LTMuNSwwLjgtNGMwLjEtMC42LDAuNi0xLDEuMi0xYzAuMSwwLDAuMSwwLDAuMiwwbDEuOSwwLjQNCgkJYzAuMywwLjEsMC42LDAuMiwwLjgsMC41YzAuMiwwLjMsMC4yLDAuNiwwLjIsMC45bC0wLjQsMS43bDEtMWMwLjEtMC4xLDAuMS0wLjEsMC4yLTAuMmMwLjctMC43LDItMiw0LjItMmMxLjIsMCwyLjEsMC4zLDIuNiwxDQoJCWMxLjIsMS42LDAuNCw1LTAuMyw4Yy0wLjcsMi44LTEuMyw1LjItMC40LDYuM2MwLjMsMC40LDAuOCwwLjYsMS41LDAuNmMxLjIsMCwyLjgtMSwzLjItMi40bDAsMGwwLDBjMC4xLTIuNiwwLjMtMy43LDAuOS01LjINCgkJYzEuNi00LjcsNS4xLTguMSw4LjMtOC4xYzAuNCwwLDAuOSwwLjEsMS4zLDAuMmMwLjgsMC4zLDEuNSwwLjgsMiwxLjRsMC42LDAuN2wwLjItMC45YzAuMS0wLjUsMC4yLTAuOCwwLjItMQ0KCQljMC4xLTAuNSwwLjYtMC45LDEuMi0wLjljMC4xLDAsMC4yLDAsMC4zLDBsMiwwLjRjMC4zLDAuMSwwLjYsMC4zLDAuOCwwLjZjMC4yLDAuMywwLjIsMC42LDAuMSwwLjljLTAuNSwxLjgtMiw4LjItMy4yLDEyLjgNCgkJYy0wLjMsMS4yLTAuNSwyLjItMC43LDNsLTAuMiwwLjlsMC45LTAuNWMxLjMtMC43LDIuMi0xLjMsMy4xLTJjMC40LTAuMywwLjktMC43LDEuNC0xbDAuMi0wLjJsLTAuMS0wLjNjLTAuMi0xLjEtMC4yLTEuOS0wLjItMg0KCQljMC0yLjgsMC45LTUuOCwyLjMtOC4xYzEuMy0yLDMuNi00LjMsNy43LTQuM2MxLjcsMCwzLjksMC40LDQuNCwyLjFjMC44LDIuOC0zLjEsNy45LTksMTEuNmwtMC40LDAuMmwwLjMsMC40YzEsMS4zLDIuNCwyLDQuMSwyDQoJCWMyLjgsMCw1LjQtMS41LDYuNS0zLjlsMCwwbDAsMGMwLjctMi40LDItOC4zLDMuMi0xMy42YzAuOC0zLjgsMS42LTcsMS44LThjMC4xLTAuNSwwLjYtMC45LDEuMi0wLjljMC4xLDAsMC4yLDAsMC4zLDBsMi4xLDAuNA0KCQljMC4zLDAuMSwwLjYsMC4zLDAuOCwwLjZjMC4yLDAuMywwLjIsMC42LDAuMSwwLjljLTAuNiwyLjItMS45LDYuNi0yLjksMTAuOGMtMC4zLDEuMS0wLjUsMi0wLjcsMi45bC0wLjIsMC43DQoJCWMtMC42LDIuOC0xLDQuNy0xLjEsNS45djAuMXYwLjFjMCwwLjEsMCwwLjIsMCwwLjNjMCwyLjcsMS4zLDMuMSwyLjEsMy4xYzAuNywwLDEuMi0wLjQsMS42LTAuN2MwLjctMC42LDEuMy0xLjYsMi0zLjJsMCwwDQoJCWMwLjMtMSwwLjgtMiwxLjgtMmMwLjEsMCwwLjMsMCwwLjQsMC4yYzAuMywwLjQsMC4xLDEuNy0wLjIsMi4zYy0xLjksNC44LTQuNCw3LjItNy45LDcuMmMtMi4xLDAtMy44LTEtNC4zLTIuNWwtMC4yLTAuN2wtMC41LDAuNQ0KCQljLTEuNywxLjgtNS42LDIuNi03LjksMi42Yy0xLjYsMC00LjYtMC4zLTYuMi0yLjdsLTAuMy0wLjRsLTAuNCwwLjNjMCwwLTMsMi4zLTYuMSwzLjhsLTAuMiwwLjF2MC4yQzExMy45LDYyLjIsMTExLjYsNjUsMTA4LjIsNjUNCgkJeiBNMTEwLjIsNTguMmMtMC45LDAuNS0yLjksMS40LTIuOSwzYzAsMC44LDAuNSwxLjMsMS40LDEuM2MxLDAsMS43LTEuMywyLjEtMy45bDAuMS0wLjhMMTEwLjIsNTguMnogTTExMS41LDM5LjYNCgkJYy0xLjcsMC0zLjgsMi4yLTQuOCw1Yy0wLjcsMi0wLjYsNC40LDAuMiw1LjhjMC4zLDAuNSwwLjcsMC45LDEuMiwxYzAuMiwwLDAuMywwLDAuNSwwYzIuMSwwLDMuNi0yLjgsNC40LTUuMQ0KCQljMC42LTEuOCwxLTQuMywwLjItNS43Yy0wLjMtMC41LTAuNy0wLjktMS4yLTFDMTExLjgsMzkuNiwxMTEuNiwzOS42LDExMS41LDM5LjZ6IE0xMjkuOSwzOS4yYy0wLjEsMC0wLjEsMC0wLjIsMA0KCQljLTIuMSwwLjItNC44LDMuOC00LjgsNy43djAuOGwwLjctMC40YzUuNS0zLjYsNS43LTYuMyw1LjctNi43bDAsMEMxMzEuMyw0MC4xLDEzMC45LDM5LjIsMTI5LjksMzkuMnoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xOTUuMiw1NS41SDE2MmMtMS4zLDAtMi4zLTEtMi4zLTIuM1YyN2MwLTEuMywxLTIuMywyLjMtMi4zaDMzLjJjMS4zLDAsMi4zLDEsMi4zLDIuM3YyNi4xDQoJCUMxOTcuNSw1NC40LDE5Ni41LDU1LjUsMTk1LjIsNTUuNXoiLz4NCgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTcwLjcsMjAuMkwxNzAuNywyMC4yYy0zLjgsMC01LjgtMC43LTYtMi4yYy0wLjItMS40LDEtMi42LDMuOS0zLjhjMi4zLTEsNS40LTEuOCw4LjgtMi40DQoJCWMyLjktMC41LDUuNy0wLjgsOC0wLjhjMy44LDAsNS44LDAuNyw2LDIuMmMwLjIsMS40LTEsMi42LTMuOSwzLjhjLTIuMywxLTUuNCwxLjgtOC44LDIuNEMxNzUuOSwxOS45LDE3My4xLDIwLjIsMTcwLjcsMjAuMnoNCgkJIE0xNjcsMTcuNmMwLjUsMC4yLDEuNiwwLjUsMy43LDAuNWMyLjIsMCw0LjktMC4zLDcuNy0wLjhjNi4zLTEuMSw5LjktMi44LDEwLjgtMy43Yy0wLjUtMC4yLTEuNi0wLjUtMy43LTAuNQ0KCQljLTIuMiwwLTQuOSwwLjMtNy43LDAuOEMxNzEuNSwxNS4xLDE2Ny45LDE2LjgsMTY3LDE3LjZ6Ii8+DQoJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxNzMuMSwzMS44IDE4Ny40LDQwLjEgMTczLjEsNDguMyAJIi8+DQo8L2c+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTAuOCw1NS4xYy0yLjUsMC0zLjMtMC44LTMuOC0yLjJsLTAuMy0wLjdsLTAuNSwwLjZjLTEuNywyLTMuOCwyLjMtNC45LDIuM2gtMC4xYy0xLjgsMC0zLjUtMS00LjEtMi4zDQoJbC0wLjMtMC43bC0wLjUsMC42Yy0xLjcsMi4yLTQsMi41LTUuMywyLjVjLTEuMiwwLTIuMi0wLjUtMi45LTEuNWMtMS40LTEuOS0xLjctNS4yLTAuNy04LjZjMCwwLDEuOC02LjYsMi4zLTguNA0KCWMwLjEtMC41LDAuNi0wLjksMS4yLTAuOWMwLjEsMCwwLjIsMCwwLjMsMGwxLjgsMC40YzAuMywwLjEsMC42LDAuMywwLjgsMC42czAuMiwwLjYsMC4xLDAuOUMzMy42LDM4LjYsMzMsNDEsMzIuMiw0NA0KCWMtMC42LDIuNS0xLDQuMS0xLDQuN2MwLDEuOCwwLjgsMi45LDIuMiwyLjljMC41LDAsMS44LTAuMiwyLjktMS44bDAuMS0wLjF2LTAuMWMwLTIuMSwwLjMtMy45LDAuOS01LjdjMS43LTQuOSw0LjgtOC4xLDcuOC04LjENCgljMC40LDAsMC44LDAuMSwxLjIsMC4yYzAuOSwwLjMsMS40LDAuNywxLjksMS4ybDAuNSwwLjZsMC4yLTAuOGMxLjEtNCwyLjMtOC4zLDIuOS0xMC41YzAuMi0wLjcsMC43LTEsMS4yLTFjMC4xLDAsMC4yLDAsMC4zLDANCglsMS44LDAuNGMwLjMsMC4xLDAuNiwwLjMsMC44LDAuNmMwLjIsMC4zLDAuMiwwLjYsMC4xLDAuOWMtMC43LDIuNi0xLjksNi44LTIuOSwxMC44Yy0xLjMsNS4yLTIsOC41LTIsOS45YzAsMS4xLDAsMy41LDEuOSwzLjUNCgljMC43LDAsMS4yLTAuNCwxLjYtMC43YzAuOC0wLjcsMS42LTEuOCwyLjItMy4ybDAuMS0wLjJjMC40LTEsMC44LTEuNywxLjctMS43YzAuMSwwLDAuMywwLDAuNCwwLjJjMC4zLDAuNCwwLjIsMS40LTAuMSwyLjINCglDNTcuMiw1Mi4zLDU0LDU1LjEsNTAuOCw1NS4xeiBNNDUuNywzOS42Yy0xLjYsMC0zLjMsMi41LTQuMSw1Yy0wLjgsMi4yLTAuOSw0LjctMC4yLDUuOWMwLjIsMC40LDAuNiwwLjcsMC45LDAuOQ0KCWMwLjEsMCwwLjMsMC4xLDAuNCwwLjFjMS42LDAsMy40LTIuNiw0LjMtNS4xYzAuNy0yLjEsMC44LTQuNCwwLjItNS43Yy0wLjItMC41LTAuNi0wLjgtMS0xQzQ1LjksMzkuNiw0NS44LDM5LjYsNDUuNywzOS42eiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMzLjgsMzIuMmMtMC4zLDAtMC41LTAuMS0wLjgtMC4ybDAsMGMtMC4zLTAuMS0wLjUtMC4zLTAuNi0wLjZjLTAuMi0wLjMtMC4zLTAuNi0wLjQtMWMwLTAuNSwwLTAuOSwwLTEuNA0KCWMwLjEtMC41LDAuMi0wLjksMC40LTEuNGMwLjItMC4zLDAuNC0wLjcsMC42LTFjMC4zLTAuMywwLjYtMC42LDAuOS0wLjhjMC4zLTAuMiwwLjYtMC4zLDEtMC4zSDM1YzAuMywwLDAuNiwwLjEsMC44LDAuMg0KCWMwLjMsMC4yLDAuNSwwLjQsMC43LDAuN2MwLjIsMC4zLDAuMywwLjYsMC40LDFjMC4xLDAuNCwwLjEsMC44LDAsMS4zcy0wLjIsMC45LTAuNCwxLjRjLTAuMiwwLjMtMC40LDAuNi0wLjYsMQ0KCWMtMC4zLDAuMy0wLjYsMC42LTAuOSwwLjhjLTAuMywwLjItMC42LDAuMy0xLDAuNEMzMy45LDMyLjIsMzMuOSwzMi4yLDMzLjgsMzIuMnoiLz4NCjwvc3ZnPg0K" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <!--ADD ALL YOUR SCRIPTS HERE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script> -->
+    <script src="./bootstrap/js/bootstrap.js" charset="utf-8"></script>
+    <script src="./js/app.js" charset="utf-8"></script>
+    <script src="./js/loginController.js" charset="utf-8"></script>
+    <script src="./js/movieController.js" charset="utf-8"></script>
+    <script src="./js/detailsController.js" charset="utf-8"></script>
+    <script src="./js/directive.js" charset="utf-8"></script>
+    <script src="./js/service.js" charset="utf-8"></script>
+  </body>
+</html>
